@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
-import Flyer from './flyer'; // Flyer-Komponente importieren
+import Flyer from './Flyer'; // Flyer-Komponente importieren
 
 function Litfasssaeule() {
   const { scene } = useGLTF('/litfass.glb'); // Modellpfad relativ zum 'public'-Ordner
@@ -9,9 +9,9 @@ function Litfasssaeule() {
   const [selectedFlyer, setSelectedFlyer] = useState(null); // Für Pop-up
 
   // Drehung der Litfaßsäule durch Scrollen
-  const handleScroll = (event) => {
+  function handleScroll(event) {
     setRotation((prevRotation) => [0, prevRotation[1] + event.deltaY * 0.001, 0]);
-  };
+  }
 
   const handleFlyerClick = (id) => {
     setSelectedFlyer(id);
