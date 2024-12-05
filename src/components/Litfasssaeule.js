@@ -13,9 +13,9 @@ function Litfasssaeule() {
     setRotation((prevRotation) => [0, prevRotation[1] + event.deltaY * 0.001, 0]);
   }
 
-  const handleFlyerClick = (id) => {
-    setSelectedFlyer(id);
-  };
+  function handleFlyerClick(id) {
+        setSelectedFlyer(id);
+    }
 
   return (
     <div
