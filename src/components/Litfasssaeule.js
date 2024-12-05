@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
-import Flyer from './Flyer'; // Flyer-Komponente importieren
+import Flyer from './flyer'; // Flyer-Komponente importieren
 
 function Litfasssaeule() {
   const { scene } = useGLTF('/litfass.glb'); // Modellpfad relativ zum 'public'-Ordner
